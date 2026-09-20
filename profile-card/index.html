@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile Card</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 500px;
+
+            padding: 30px;
+
+            border: 2px solid #333;
+
+            margin: 20px;
+
+            border-radius: 15px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        #likeButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            .links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Profile Card</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Eldar</h2>
+
+            <p>
+                I am an IT Management student interested in technology
+                and product management. I enjoy learning new technologies
+                and working on useful projects.
+            </p>
+
+            <div class="links">
+                <a href="mailto:example@gmail.com">Email</a>
+                <a href="https://github.com/Yeldar-hub" target="_blank">GitHub</a>
+            </div>
+
+            <button id="likeButton" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                Like ❤️
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Profile Card</p>
+    </footer>
+
+    <script>
+        const likeButton = document.querySelector("#likeButton");
+
+        likeButton.addEventListener("click", function () {
+            likeButton.textContent = "Liked ❤️";
+            likeButton.classList.remove("bg-blue-500");
+            likeButton.classList.add("bg-green-500");
+        });
+    </script>
+
+</body>
+</html>
