@@ -1,0 +1,81 @@
+* { 
+  box-sizing: border-box; 
+} 
+
+body { 
+  font-family: Arial, sans-serif; 
+  background-color: #501313; 
+  margin: 0; 
+  padding: 20px; 
+} 
+
+header { 
+  text-align: center; 
+  margin-bottom: 20px; 
+} 
+
+main { 
+  display: flex; 
+  justify-content: center; 
+} 
+
+.avatar-img {
+    width: 130px;           
+    height: 130px;          
+    border-radius: 50%;     
+    object-fit: cover;      
+    margin: 0 auto 20px;    
+    border: 3px solid #646cff; 
+    display: block;
+}
+
+.card { 
+  width: auto; 
+  max-width: 500px; 
+  padding: 30px; 
+  border: 2px solid #ffffff; 
+  margin: 20px; 
+  border-radius: 15px; 
+  background-color: #602121; 
+  text-align: center; 
+} 
+
+.links { 
+  .links {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 12px;              
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+} 
+
+.links a { 
+  text-decoration: none; 
+  color: #ffffff; 
+} 
+
+#likeButton { 
+  margin-top: 20px; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+} 
+
+footer { 
+  text-align: center; 
+  margin-top: 30px; 
+} 
+
+@media (max-width: 600px) { 
+  .card { 
+    margin: 10px; 
+    padding: 20px; 
+  } 
+  .links { 
+    flex-direction: column; 
+    gap: 10px; 
+  } 
+}
