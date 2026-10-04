@@ -1,69 +1,46 @@
-import { useState } from 'react';
-import myAvatar from '../assets/avatar.jpg'; 
+import avatar from '../assets/avatar.jpg'
+import LikeButton from './LikeButton'
 
-
-type LinkItem = {
-  id: number;
-  label: string;
-  url: string;
-};
+type Link = {
+  id: number
+  label: string
+  url: string
+}
 
 type ProfileCardProps = {
-  name: string;
-  description: string;
-  links: LinkItem[]; 
-};
+  name: string
+  description: string
+  links: Link[]
+}
 
-function LinkBadge(props: { link: LinkItem }) {
+function ProfileCard({ name, description, links }: ProfileCardProps) {
   return (
-    <div>
-    <a href={props.link.url} target="_blank" rel="noreferrer">
-      {props.link.label}
-    </a>
+    <div className="card">
+      <img
+        className="avatar-img"
+        src={avatar}
+        alt="Profile"
+      />
+
+      <h2>{name}</h2>
+
+      <p>{description}</p>
+
+      <div className="links">
+        {links.map((link) => (
+          <a
+            key={link.id}
+            href={link.url}
+            target="_blank"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <LikeButton />
     </div>
-  );
+  )
 }
 
-function ProfileCard(props: ProfileCardProps) {
-  const [isLiked, setIsLiked] = useState(false);
-
-  function handleLikeClick() {
-    setIsLiked(!isLiked); 
-  }
-
-  let linksContent;
-  if (props.links.length === 0) {
-    linksContent = <p>No links available</p>;
-  } else {
-    linksContent = props.links.map(function(item) {
-      return <LinkBadge key={item.id} link={item} />;
-    });
-  }
-
-  return (
-    <main>
-      <section className="card">
-        <img src={myAvatar} alt="Avatar" className="avatar-img" />
-        <h2>{props.name}</h2>
-        <p>{props.description}</p>
-
-        <div className="links">
-          {linksContent}
-        </div>
-
-        <button
-          id="likeButton"
-          onClick={handleLikeClick}
-          style={{ 
-            backgroundColor: isLiked ? '#22c55e' : '#3b82f6', 
-            color: 'white' 
-          }}
-        >
-          {isLiked ? 'Liked ❤️' : 'Like ❤️'}
-        </button>
-      </section>
-    </main>
-  );
-}
-
-export default ProfileCard;
+export default ProfileCard

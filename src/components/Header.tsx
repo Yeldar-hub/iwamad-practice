@@ -1,6 +1,9 @@
 import { NavLink } from 'react-router'
+import { useLikes } from '../context/LikesContext'
 
 function Header() {
+  const { likes } = useLikes()
+
   return (
     <header>
       <h1>My Profile</h1>
@@ -27,6 +30,8 @@ function Header() {
           Contact
         </NavLink>
       </nav>
+
+      <p>Likes: {likes}</p>
     </header>
   )
 }

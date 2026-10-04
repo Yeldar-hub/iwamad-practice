@@ -4,9 +4,11 @@ import Footer from './Footer'
 
 function Layout() {
   return (
-    <div className="app-container">
+    <div>
       <Header />
+
       <Outlet />
+
       <Footer />
     </div>
   )

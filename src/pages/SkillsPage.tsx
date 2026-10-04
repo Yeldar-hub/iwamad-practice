@@ -1,15 +1,19 @@
 function SkillsPage() {
   return (
     <main>
-      <h1>My Skills</h1>
+      <div className="page">
+        <h2>My Skills</h2>
 
-      <ul>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>Project Management</li>
-      </ul>
+        <ul>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Project Management</li>
+        </ul>
+      </div>
     </main>
-  );
+  )
 }
 
-export default SkillsPage;
+export default SkillsPage
