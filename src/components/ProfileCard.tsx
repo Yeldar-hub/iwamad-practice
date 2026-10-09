@@ -1,5 +1,7 @@
+import Card from './ui/Card'
 import avatar from '../assets/avatar.jpg'
 import LikeButton from './LikeButton'
+import SkillBadge from './SkillBadge'
 
 type Link = {
   id: number
@@ -15,7 +17,7 @@ type ProfileCardProps = {
 
 function ProfileCard({ name, description, links }: ProfileCardProps) {
   return (
-    <div className="card">
+    <Card>
       <img
         className="avatar-img"
         src={avatar}
@@ -26,12 +28,19 @@ function ProfileCard({ name, description, links }: ProfileCardProps) {
 
       <p>{description}</p>
 
+      <div className="skills">
+        <SkillBadge skill="React" />
+        <SkillBadge skill="TypeScript" />
+        <SkillBadge skill="CSS" />
+      </div>
+
       <div className="links">
         {links.map((link) => (
           <a
             key={link.id}
             href={link.url}
             target="_blank"
+            rel="noopener noreferrer"
           >
             {link.label}
           </a>
@@ -39,7 +48,7 @@ function ProfileCard({ name, description, links }: ProfileCardProps) {
       </div>
 
       <LikeButton />
-    </div>
+    </Card>
   )
 }
 
