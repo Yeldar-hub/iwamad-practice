@@ -1,3 +1,4 @@
+
 import { NavLink } from 'react-router'
 import { useLikes } from '../context/LikesContext'
 import logo from '../assets/logo.svg'
@@ -15,6 +16,7 @@ function Header() {
       <nav className="header-nav" aria-label="Main navigation">
         <NavLink
           to="/"
+          end
           className={({ isActive }) => isActive ? 'active' : ''}
         >
           Home
@@ -32,6 +34,13 @@ function Header() {
           className={({ isActive }) => isActive ? 'active' : ''}
         >
           Contact
+        </NavLink>
+
+        <NavLink
+          to="/register"
+          className={({ isActive }) => isActive ? 'active' : ''}
+        >
+          Register
         </NavLink>
       </nav>
 
