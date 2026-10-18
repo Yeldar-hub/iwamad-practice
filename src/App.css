@@ -182,3 +182,124 @@
     border-right-color: var(--border);
   }
 }
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F3F6FC;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #F3F6FC;
+  color: #1F2937;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Global light theme */
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #1F2937;
+  background-color: #F3F6FC;
+  color-scheme: light;
+}
+
+html {
+  min-height: 100%;
+  background-color: #F3F6FC;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #F3F6FC;
+  color: #1F2937;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #F3F6FC;
+}
+
+/* Shared page layout */
+
+#root > main,
+#root > section,
+main {
+  box-sizing: border-box;
+}
+
+main {
+  color: #1F2937;
+}
+
+main h1,
+main h2,
+main h3,
+section h1,
+section h2,
+section h3 {
+  color: #1F2937;
+}
+
+main p,
+main li,
+section p,
+section li {
+  color: #374151;
+}
+
+/* Shared cards */
+
+.card {
+  background-color: #FFFFFF;
+  color: #1F2937;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(31, 41, 55, 0.05);
+}
+
+/* Shared navigation */
+
+.site-header {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(31, 41, 55, 0.05);
+}
+
+.header-nav a {
+  color: #1D4ED8;
+}
+
+.header-nav a:hover {
+  color: #1E40AF;
+}
+
+/* Footer */
+
+footer {
+  color: #6B7280;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 480px) {
+  main {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .site-header {
+    border-radius: 8px;
+  }
+}
