@@ -9,16 +9,14 @@ type EventCardProps = {
 
 export default function EventCard({ event }: EventCardProps) {
   return (
-    <article>
-      <Card>
-        <h2>{event.title}</h2>
-        <p>Date: {event.date}</p>
-        <p>Place: {event.place}</p>
-        <Tag label={`${event.seats} seats`} />
-        <p>
-          <Link to={`/events/${event.id}`}>Details</Link>
-        </p>
-      </Card>
-    </article>
+    <Card>
+      <h2>{event.title}</h2>
+      <p>Date: {event.date}</p>
+      <p>Place: {event.place}</p>
+      <Tag label={`${event.seats} seats`} />
+      <p>
+        <Link to={`/events/${event.id}`}>Details</Link>
+      </p>
+    </Card>
   )
 }
