@@ -1,5 +1,4 @@
-
-import { NavLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
 import { useLikes } from '../context/LikesContext'
 import logo from '../assets/logo.svg'
 
@@ -41,6 +40,13 @@ function Header() {
           className={({ isActive }) => isActive ? 'active' : ''}
         >
           Register
+        </NavLink>
+
+        <NavLink
+          to="/events"
+          className={({ isActive }) => isActive ? 'active' : ''}
+        >
+          Events
         </NavLink>
       </nav>
 

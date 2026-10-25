@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router'
+import { BrowserRouter } from 'react-router-dom'
 import { LikesProvider } from './context/LikesContext'
 import App from './App'
 import './styles/tokens.css'
